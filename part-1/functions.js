@@ -2,8 +2,6 @@
 // returing the name of the month as a string ('January', 'February', 'March', 'April', 'May',
 // ... etc).
 
-const dateObj = new Date();
-
 function month(date) {
   const monthNum = date.getMonth();
   let monthName;
@@ -64,6 +62,21 @@ function month(date) {
   return monthName;
 }
 
-console.log(month(dateObj));
+// Write a function reverseSentence(string) that takes a string of words and returns
+// a string with the words in reverse order. If there is only one word in the string,
+// return it unchanged. Consider any series of non-space characters a word.
 
-module.exports = month;
+function reverseSentence(string) {
+  const wordArray = string.split(/\s/g);
+  const reversedArray = [];
+  if (wordArray.length === 1) {
+    return wordArray.join();
+  } else {
+    for (let i = wordArray.length - 1; i >= 0; i -= 1) {
+      reversedArray.push(wordArray[i]);
+    }
+  }
+  return reversedArray.join(" ");
+}
+
+module.exports = { month, reverseSentence };
