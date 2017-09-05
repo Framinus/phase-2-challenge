@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const { month, reverseSentence } = require('./functions.js');
+const { month, reverseSentence, nameProps } = require('./functions.js');
 
 describe('month()', function () {
   it('should return september when passed new Date(1981, 8, 24)', function () {
@@ -21,5 +21,16 @@ describe('reverseSentence()', function () {
   });
   it('should throw a TypeError when passed an array', function () {
     expect(() => reverseSentence([])).to.throw(TypeError, "input must be a string");
+  });
+});
+
+describe('nameProps()', function () {
+  it('should return ["bananas", "cats", "oatmeal raisin"] if passed { pet: "cats", cookie: "oatmeal raisin", fruit: "bananas" }', function () {
+    const testObj = { pet: "cats", cookie: "oatmeal", fruit: "bananas" };
+    expect(nameProps(testObj)).to.eql(["bananas", "cats", "oatmeal"]);
+  });
+  it('should return ["bananas, "cats", "Fiji"] if passed { pet: "cats", country: "Fiji", fruit: "bananas" }', function () {
+    const testObj = { pet: "cats", country: "Fiji", fruit: "bananas" };
+    expect(nameProps(testObj)).to.eql(["bananas", "cats", "Fiji"]);
   });
 });

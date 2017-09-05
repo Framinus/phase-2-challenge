@@ -86,4 +86,15 @@ function reverseSentence(string) {
   }
 }
 
-module.exports = { month, reverseSentence };
+// Write a function nameProps(obj) that returns the names of the properties
+// an object has in alphabetical order. Ignore symbolic properties and
+// count only the "own properties" (not inherited) of the object.
+
+function nameProps(obj) {
+  const valuesArray = Object.values(obj);
+  return valuesArray.sort();
+}
+
+console.log(nameProps({ pet: "cats", cookie: "oatmeal raisin", fruit: "bananas" }));
+
+module.exports = { month, reverseSentence, nameProps };
