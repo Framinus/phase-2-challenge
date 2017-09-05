@@ -10,6 +10,10 @@ describe('month()', function () {
     const randoDate = new Date(2008, 0, 21);
     expect(month(randoDate)).to.equal('January');
   });
+  it('should return "not a valid date object" if passed in something other than an object.', function () {
+    const badDate = "2017, 8, 4";
+    expect(() => month(badDate)).to.throw(TypeError, "not a valid date object");
+  });
 });
 
 describe('reverseSentence()', function () {
