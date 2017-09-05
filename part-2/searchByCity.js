@@ -7,6 +7,7 @@
 const fs = require('fs');
 
 const city = process.argv.slice(2).join(' ');
+const contactsArray = [];
 
 if (city === undefined) {
   throw new Error('please enter a city name.');
@@ -16,19 +17,16 @@ try {
   const contactObj = JSON.parse(fs.readFileSync('./clients.json'));
   for (let i = 0; i < contactObj.length; i += 1) {
     if (city === contactObj[i].city.toLowerCase()) {
-      console.log(`
-        [
-          {
-            id: "${contactObj[i].id}",
-            rep_name: "${contactObj[i].rep_name}",
-            company: "${contactObj[i].company}",
-            city: "${contactObj[i].city}",
-            state: "${contactObj[i].state}"
-          }
-        ]
-        `);
+      contactsArray.push({
+        id: contactObj[i].id,
+        rep_name: contactObj[i].rep_name,
+        company: contactObj[i].company,
+        city: contactObj[i].city,
+        state: contactObj[i].state,
+      });
     }
   }
+  console.log(contactsArray);
 } catch (e) {
   console.log(e);
 }
