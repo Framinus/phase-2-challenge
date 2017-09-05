@@ -92,7 +92,11 @@ function reverseSentence(string) {
 
 function nameProps(obj) {
   const valuesArray = Object.values(obj);
-  return valuesArray.sort();
+  return valuesArray.sort((a, b) => {
+    if (a.toLowerCase() < b.toLowerCase()) return -1;
+    if (a.toLowerCase() > b.toLowerCase()) return 1;
+    return 0;
+  });
 }
 
 console.log(nameProps({ pet: "cats", cookie: "oatmeal raisin", fruit: "bananas" }));
