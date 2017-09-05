@@ -1,0 +1,11 @@
+{
+  "name": "phase-2-challenge",
+  "version": "1.0.0",
+  "description": "Phase 2 Challenge for Learner's Guild",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "James McCormack",
+  "license": "ISC"
+}
