@@ -5,25 +5,26 @@
 // and prints the id, company and phone of each matching client.
 const fs = require('fs');
 
-const command = process.argv[2];
-const companyName = process.argv.slice(3).join(' ');
+const company = process.argv.slice(2).join(' ');
 
-if (command !== 'company') {
-  throw new Error('please enter "company" followed by the company name.');
+if (company === undefined) {
+  throw new Error('must enter a company name');
 }
-console.log(`Finding companies with name ${companyName}...\n`);
 
 try {
-  // program here
+  console.log(`Finding companies with name "${company}"...\n`);
   const contactObj = JSON.parse(fs.readFileSync('./clients.json'));
   for (let i = 0; i < contactObj.length; i += 1) {
-    if (companyName === contactObj[i].company) {
-      console.log(
-        {
-          id: contactObj[i].id,
-          company: contactObj[i].company,
-          phone: contactObj[i].phone },
-      );
+    if (company === contactObj[i].company.toLowerCase()) {
+      console.log(`
+        [
+          {
+            id: "${contactObj[i].id}",
+            company: "${contactObj[i].company}",
+            phone: "${contactObj[i].phone}"
+          },
+        ]
+      `);
     }
   }
 } catch (e) {
