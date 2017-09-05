@@ -13,7 +13,7 @@ if (city === undefined) {
   throw new Error('please enter a city name.');
 }
 try {
-  console.log(`Finding cities with name ${city}`);
+  console.log(`Finding cities with name "${city}"...\n`);
   const contactObj = JSON.parse(fs.readFileSync('./clients.json'));
   for (let i = 0; i < contactObj.length; i += 1) {
     if (city === contactObj[i].city.toLowerCase()) {
