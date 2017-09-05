@@ -10,4 +10,5 @@ describe('month()', function () {
     const randoDate = new Date(2008, 0, 21);
     expect(month(randoDate)).to.equal('January');
   });
+  it('should throw a reference error when')
 });
