@@ -33,4 +33,10 @@ describe('nameProps()', function () {
     const testObj = { pet: "cats", country: "Fiji", fruit: "bananas" };
     expect(nameProps(testObj)).to.eql(["bananas", "cats", "Fiji"]);
   });
+  it('should throw an error if passed a string', function () {
+    expect(() => nameProps("bananas")).to.throw(TypeError, "not an object");
+  });
+  it('should throw an error if passed an array', function () {
+    expect(() => nameProps(["bananas", "cats", "Fiji"])).to.throw(TypeError, "not an object");
+  });
 });

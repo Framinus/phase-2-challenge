@@ -91,12 +91,19 @@ function reverseSentence(string) {
 // count only the "own properties" (not inherited) of the object.
 
 function nameProps(obj) {
-  const valuesArray = Object.values(obj);
-  return valuesArray.sort((a, b) => {
-    if (a.toLowerCase() < b.toLowerCase()) return -1;
-    if (a.toLowerCase() > b.toLowerCase()) return 1;
-    return 0;
-  });
+  if (typeof obj !== "object" || Array.isArray(obj) === true) {
+    throw new TypeError("not an object");
+  }
+  try {
+    const valuesArray = Object.values(obj);
+    return valuesArray.sort((a, b) => {
+      if (a.toLowerCase() < b.toLowerCase()) return -1;
+      if (a.toLowerCase() > b.toLowerCase()) return 1;
+      return 0;
+    });
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 console.log(nameProps({ pet: "cats", cookie: "oatmeal raisin", fruit: "bananas" }));
