@@ -67,6 +67,9 @@ function month(date) {
 // return it unchanged. Consider any series of non-space characters a word.
 
 function reverseSentence(string) {
+  if (typeof string !== 'string') {
+    throw new TypeError("input must be a string");
+  }
   const wordArray = string.split(/\s/g);
   const reversedArray = [];
   if (wordArray.length === 1) {
@@ -76,7 +79,11 @@ function reverseSentence(string) {
       reversedArray.push(wordArray[i]);
     }
   }
-  return reversedArray.join(" ");
+  try {
+    return reversedArray.join(" ");
+  } catch (e) {
+    console.log(TypeError);
+  }
 }
 
 module.exports = { month, reverseSentence };

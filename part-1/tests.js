@@ -10,10 +10,6 @@ describe('month()', function () {
     const randoDate = new Date(2008, 0, 21);
     expect(month(randoDate)).to.equal('January');
   });
-  it('should return "undefined" when passed a bad date object', function () {
-    const badDate = "january 21 2008";
-    expect(month(badDate)).to.equal(undefined);
-  });
 });
 
 describe('reverseSentence()', function () {
@@ -23,4 +19,7 @@ describe('reverseSentence()', function () {
   it('should return "bananas" when passed "bananas"', function () {
     expect(reverseSentence("bananas")).to.equal("bananas");
   });
-})
+  it('should throw a TypeError when passed an array', function () {
+    expect(() => reverseSentence([])).to.throw(TypeError, "input must be a string");
+  });
+});
