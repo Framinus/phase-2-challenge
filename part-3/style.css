@@ -10,6 +10,16 @@ button {
   cursor: pointer;
 }
 
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+
 .header-container {
   border: 1px solid black;
   border-radius: 3px;
@@ -41,7 +51,7 @@ button {
   align-items: center;
   display: flex;
   flex-direction: column;
-  flex: 0 0 12em;
+  flex: 0 0 14em;
   justify-content: flex-start;
   order: -1;
 }
@@ -58,7 +68,6 @@ button {
   width: 100%;
 }
 
-
 .nav {
   margin: 0 auto;
   padding: 10px;
@@ -72,6 +81,11 @@ button {
 .movie-title {
   font-size: 36px;
   padding: 10px;
+}
+
+.category {
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 
 .category-title {
@@ -121,7 +135,7 @@ button {
 
 /*media query section.*/
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .main-container {
     flex: 1;
     flex-direction: row;
