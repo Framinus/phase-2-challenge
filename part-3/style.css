@@ -8,6 +8,10 @@ body {
   /*overflow: hidden;*/
 }
 
+button {
+  cursor: pointer;
+}
+
 .header-container {
   border: 1px solid black;
   border-radius: 3px;
@@ -80,6 +84,15 @@ body {
   flex-grow: 1;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.play {
+  max-width: 70px;
+}
+
+
+.name {
+  width: 30px;
 }
 
 .time {
