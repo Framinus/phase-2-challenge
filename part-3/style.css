@@ -87,6 +87,10 @@ button {
 }
 
 .play {
+  background-color: rgb(30, 33, 39);
+  border-radius: 7px;
+  color: #fff;
+  font-weight: bold;
   max-width: 70px;
 }
 
