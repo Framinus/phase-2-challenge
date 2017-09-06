@@ -26,18 +26,48 @@ Q: How do you set an environment variable in your shell?
 A: create it: var myVar = "awesome". Then type export myVar to use it in your session. If you want to use it permanently, export it in your .bashrc file.
 
 Q: What keyboard shortcut do you use to split the screen in your editor?
-A: 
+A: command-K, then release, then arrow key in the direction you want to split.
 
-How do you create an alias in your shell?
+Q: How do you create an alias in your shell?
+A: For just one session, you type alias <name>="<command>", and then export it to your bash session.
+For permanent use, you define the alias the same way in your .bashrc.
 
-When a terminal command completes, how can you tell if it was successful or not?
+Q: When a terminal command completes, how can you tell if it was successful or not?
+A: If you get your prompt back and there is no error, it was successful. 
 
-What does your ~/.gitconfig have in it? (paste the whole file here)
+Q: What does your ~/.gitconfig have in it? (paste the whole file here)
+A:
+[user]
+        name = James
+        email = fake-so-its-not-on-github@gmail.com
 
-What is the difference between a relative and absolute path?
+        [alias]
+          co = checkout
+          ci = commit
+          st = status --short --branch
+          l  = log --oneline --decorate --graph --relative-date --show-signature
+          ls-untracked-files = !git-ls-files -o --exclude-standard
+          ls-ignored-files = !git-ls-files --others -i --exclude-standard
+          ls-modified-files = !git-ls-files -m
+        [color]
+          status = auto
+          diff = auto
+          branch = auto
+          interactive = auto
+          ui = auto
+          pager = true
+        [color "status"]
+          added = green
+          changed = yellow
+          untracked = red
+        [user]
 
-Lets say you have the following file structure
+Q: What is the difference between a relative and absolute path?
+A: An absolute path includes every directory back to the home directory. A relative path only includes the path from your current working directory to a file or directory. for example:
+absolute: ~/Desktop/phase-2-challenge/part-4/quiz.md
+relative: ./path-4/quiz.md
 
+Q: Lets say you have the following file structure
 ~
 └── Projects
     ├── pinterest-for-dogs
@@ -46,9 +76,37 @@ Lets say you have the following file structure
         ├── README.md
         └── package.json
 And you were in the linkedin-for-dancers folder. What command would you use to copy the README.md file to the pinterest-for-dogs folder?
+A: cp README.md ../pinterest-for-dogs
 
-What keyboard shortcut do you use, in your editor, to go to a file in the project you have open?
+Q: What keyboard shortcut do you use, in your editor, to go to a file in the project you have open?
+A: cmd-<num of tab of file>. So if you have three tabs open and want to switch to the third, you type cmd-3.
 
-What files or folders do you want all git repositories to ignore?
+Q: What files or folders do you want all git repositories to ignore?
+A: Copied and pasted from my global .gitignore:
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.log
+*.orig
+*.rej
+*.swo
+*.swp
+*.vi
+*.zip
+*~
 
-What is the main difference between Array.map and Array.forEach in JavaScript?
+# OS or Editor files
+._*
+.cache
+.DS_Store
+.idea
+.project
+.settings
+.tmproj
+.esproj
+.sublime-project
+.sublime-workspace
+.irb-save-history
+
+Q: What is the main difference between Array.map and Array.forEach in JavaScript?
+A: Array.map iterates through an array and returns an a new array based on its callback, while Array.forEach returns undefined. Array.forEach's main role is to create side effects on the array it is iterating through.
