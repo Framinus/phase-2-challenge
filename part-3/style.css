@@ -3,8 +3,6 @@ html {
 }
 
 body {
-  /*display: flex;
-  flex-direction: column;*/
   font-family: helvetica, sans-serif;
 }
 
@@ -31,13 +29,9 @@ button {
   margin: 2px;
 }
 
-.scroll {
-  overflow-y: auto;
-}
-
 .main-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -5px;
@@ -49,20 +43,25 @@ button {
   flex-direction: column;
   flex: 0 0 12em;
   justify-content: flex-start;
+  order: -1;
 }
 
 .navbar-header {
   background-color: rgb(63, 68, 80);
+  border: 1px solid grey;
+  border-radius: 3px;
   color: #fff;
   font-size: 20px;
-  padding: 10px;
+  height: 35px;
+  padding-top: 7px;
+  text-align: center;
   width: 100%;
 }
+
 
 .nav {
   margin: 0 auto;
   padding: 10px;
-  width: 100%;
 }
 
 .movie-container {
@@ -116,7 +115,14 @@ button {
   background-color: rgb(155, 162, 178);
   font-size: 12px;
   height: 30px;
-  margin-top: -5px;
   text-align: center;
   width: 100%;
+}
+
+/*media query section.*/
+
+@media (min-width: 500px) {
+  .main-container {
+    flex: 1;
+    flex-direction: row;
 }
