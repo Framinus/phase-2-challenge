@@ -3,9 +3,9 @@ html {
 }
 
 body {
-  box-sizing: border-box;
+  /*display: flex;
+  flex-direction: column;*/
   font-family: helvetica, sans-serif;
-  /*overflow: hidden;*/
 }
 
 button {
@@ -36,30 +36,38 @@ button {
 }
 
 .main-container {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-bottom: -5px;
 }
 
 .navbar-container {
-  border: 1px solid black;
-  flex-grow: 1;
-  flex-shrink: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 12em;
+  justify-content: flex-start;
 }
 
 .navbar-header {
   background-color: rgb(63, 68, 80);
-  border: 1px solid black;
   color: #fff;
   font-size: 20px;
   padding: 10px;
+  width: 100%;
+}
+
+.nav {
+  margin: 0 auto;
+  padding: 10px;
+  width: 100%;
 }
 
 .movie-container {
-  border: 1px solid black;
-  flex-grow: 4;
+  border-left: 1px solid black;
+  flex-grow: 6;
 }
 
 .movie-title {
@@ -76,6 +84,7 @@ button {
   align-items: center;
   display: flex;
   flex-direction: row;
+  flex-wrap:wrap;
   justify-content: flex-start;
   padding: 10px;
 }
@@ -101,4 +110,13 @@ button {
 
 .time {
   flex-grow: 2;
+}
+
+.rights {
+  background-color: rgb(155, 162, 178);
+  font-size: 12px;
+  height: 30px;
+  margin-top: -5px;
+  text-align: center;
+  width: 100%;
 }

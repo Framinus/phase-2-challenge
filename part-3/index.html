@@ -16,19 +16,22 @@
       <!-- Everything in the side nav bar. -->
       <div class="navbar-container scroll">
         <div class="navbar-header">Categories</div>
-          <ul>
-            <li><a href="#">Drama</a></li>
-            <li><a href="#">Romance</a></li>
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Sci-Fi</a></li>
-          </ul>
+
+            <div class="nav"><a href="#drama">Drama</a></div>
+            <div class="nav"><a href="#romance">Romance</a></div>
+            <div class="nav"><a href="#action">Action</a></div>
+            <div class="nav"><a href="#scifi">Sci-Fi</a></div>
+
       </div>
       <!-- Everything in the main content area. -->
       <div class="movie-container scroll">
         <!-- Just the title. -->
         <div class="movie-title">Movies</div>
           <!-- Drama category title. -->
-          <div class="category-title">Drama</div>
+          <a name="drama">
+            <div class="category-title">Drama</div>
+          </a>
+
           <!-- Drama category movies. -->
           <div class="movie-content">
             <button class="content play">Play</button>
@@ -46,7 +49,9 @@
             <span class="content time">1:33:21</span>
           </div>
           <!-- Romance category title. -->
-          <div class="category-title">Romance</div>
+          <a name="romance">
+            <div class="category-title">Romance</div>
+          </a>
           <!-- Romance category movies. -->
           <div class="movie-content">
             <button class="content play">Play</button>
@@ -64,7 +69,9 @@
             <span class="content time">1:33:21</span>
           </div>
           <!-- Action category title. -->
-          <div class="category-title">Action</div>
+          <a name="action">
+            <div class="category-title">Action</div>
+          </a>
           <!-- Action category movies. -->
           <div class="movie-content">
             <button class="content play">Play</button>
@@ -82,7 +89,9 @@
             <span class="content time">1:33:21</span>
           </div>
           <!-- Sci-Fi category title. -->
-          <div class="category-title">Sci-Fi</div>
+          <a name="scifi">
+            <div class="category-title">Sci-Fi</div>
+          </a>
           <!-- Sci-Fi Category Movies. -->
           <div class="movie-content">
             <button class="content play">Play</button>
@@ -100,6 +109,9 @@
             <span class="content time">1:33:21</span>
           </div>
         </div>
+      </div>
+      <div class="footer-container">
+        <div class="rights"><p>This is a parody site, obviously.</p></div>
       </div>
   </body>
 </html>
