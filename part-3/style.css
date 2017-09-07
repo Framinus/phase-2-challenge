@@ -6,7 +6,6 @@ body {
   font-family: helvetica, sans-serif;
   height: 100%;
   margin: 0;
-  overflow: hidden;
 }
 
 button {
@@ -22,21 +21,18 @@ a:hover {
   color: red;
 }
 
-.giant-container {
+/*.giant-container {
   display: flex;
-  flex: 0 0 auto;
   flex-direction: column;
   height: 100%;
-
-}
+}*/
 
 .header-container {
+  background-color: red;
   border: 1px solid black;
   border-radius: 3px;
-  background-color: red;
   color: #fff;
   display: flex;
-  flex: 0 0 auto;
   flex-direction: row;
   font-size: 30px;
   font-weight: bolder;
@@ -45,7 +41,7 @@ a:hover {
   padding: 10px;
 }
 
-.logout-header {
+.header-logout {
   background-color: #fff;
   border-radius: 5px;
   margin: 2px;
@@ -53,23 +49,21 @@ a:hover {
 
 .main-container {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   flex-wrap: wrap;
-  height: calc(100% - 40px);
   justify-content: space-between;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
   position: relative;
 }
 
 .navbar-container {
   align-items: center;
   display: flex;
-  flex: auto;
-  flex-direction: column;
   flex: 0 0 14em;
+  flex-direction: column;
   justify-content: flex-start;
   order: -1;
+  overflow-y: auto;
 }
 
 .navbar-header {
@@ -92,7 +86,7 @@ a:hover {
 .movie-container {
   border-left: 1px solid black;
   flex-grow: 6;
-  overflow-y: auto;
+  /*overflow-y: auto;*/
 }
 
 .movie-title {
@@ -135,15 +129,11 @@ a:hover {
 
 
 .name {
-  width: 50px;
+  flex-basis: 50px;
 }
 
 .time {
   flex-grow: 2;
-}
-
-.footer-container {
-  flex: 0 0 auto;
 }
 
 .rights {
@@ -160,4 +150,5 @@ a:hover {
   .main-container {
     flex: 1;
     flex-direction: row;
+  }
 }
