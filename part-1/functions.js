@@ -3,7 +3,7 @@
 // ... etc).
 
 function month(date) {
-  if (typeof date !== "object") {
+  if (typeof date !== "object" || Array.isArray === true) {
     throw new TypeError("not a valid date object");
   }
   try {
@@ -59,7 +59,7 @@ function month(date) {
         break;
       }
       default: {
-        monthName = 'Invalid date object entered';
+        monthName = 'Something went really wrong, because getMonth() converts any number into a month by adding 12 to it.';
         break;
       }
     }
