@@ -4,6 +4,9 @@ html {
 
 body {
   font-family: helvetica, sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
 }
 
 button {
@@ -19,6 +22,13 @@ a:hover {
   color: red;
 }
 
+.giant-container {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  height: 100%;
+
+}
 
 .header-container {
   border: 1px solid black;
@@ -26,9 +36,11 @@ a:hover {
   background-color: red;
   color: #fff;
   display: flex;
+  flex: 0 0 auto;
   flex-direction: row;
   font-size: 30px;
   font-weight: bolder;
+  height: 40px;
   justify-content: space-between;
   padding: 10px;
 }
@@ -41,15 +53,19 @@ a:hover {
 
 .main-container {
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
   flex-wrap: wrap;
+  height: calc(100% - 40px);
   justify-content: space-between;
-  margin-bottom: -5px;
+  overflow-y: auto;
+  position: relative;
 }
 
 .navbar-container {
   align-items: center;
   display: flex;
+  flex: auto;
   flex-direction: column;
   flex: 0 0 14em;
   justify-content: flex-start;
@@ -76,6 +92,7 @@ a:hover {
 .movie-container {
   border-left: 1px solid black;
   flex-grow: 6;
+  overflow-y: auto;
 }
 
 .movie-title {
@@ -118,11 +135,15 @@ a:hover {
 
 
 .name {
-  width: 30px;
+  width: 50px;
 }
 
 .time {
   flex-grow: 2;
+}
+
+.footer-container {
+  flex: 0 0 auto;
 }
 
 .rights {
