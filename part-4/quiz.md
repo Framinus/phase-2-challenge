@@ -5,10 +5,10 @@ Q: On a UNIX computer, how do you stop a running process?
 A: control-c
 
 Q: What packages do you have installed via homebrew?
-A: hub,	node,	postgresql,	trash, icu4c,	openssl, readline,	tree
+A: hub,	node,	postgresql,	trash, icu4c,	openssl, readline, tree
 
 Q: On a UNIX computer, how do you find the process id of a running process?
-A: ps aux | grep <your process name search>
+A: ps aux | grep "the process name but not in quotes."
 
 Q: In a terminal, what does control-c do?
 A: It stops a running process.
@@ -29,11 +29,11 @@ Q: What keyboard shortcut do you use to split the screen in your editor?
 A: command-K, then release, then arrow key in the direction you want to split.
 
 Q: How do you create an alias in your shell?
-A: For just one session, you type alias <name>="<command>", and then export it to your bash session.
+A: For just one session, you type alias name="command" (substituting the terms you want), and then export it to your bash session.
 For permanent use, you define the alias the same way in your .bashrc.
 
 Q: When a terminal command completes, how can you tell if it was successful or not?
-A: If you get your prompt back and there is no error, it was successful. 
+A: If you get your prompt back and there is no error, it was successful.
 
 Q: What does your ~/.gitconfig have in it? (paste the whole file here)
 A:
@@ -79,7 +79,7 @@ And you were in the linkedin-for-dancers folder. What command would you use to c
 A: cp README.md ../pinterest-for-dogs
 
 Q: What keyboard shortcut do you use, in your editor, to go to a file in the project you have open?
-A: cmd-<num of tab of file>. So if you have three tabs open and want to switch to the third, you type cmd-3.
+A: cmd-number. So if you have three tabs open and want to switch to the third, you type cmd-3.
 
 Q: What files or folders do you want all git repositories to ignore?
 A: Copied and pasted from my global .gitignore:
